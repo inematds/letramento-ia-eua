@@ -1,5 +1,7 @@
 # Letramento em IA nos EUA
 
+**🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
+
 Levantamento (set/2026) do que o governo dos EUA está fazendo em letramento em IA — escolas, trabalhadores e pequenas empresas — com as novidades de 2026, leitura crítica, lições para o Brasil e um anexo de cursos grátis de universidades e empresas de tecnologia.
 
 - Página: https://inematds.github.io/letramento-ia-eua/guia/
