@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Letramento em IA nos EUA — o que o governo está fazendo</title>
+<meta name="description" content="Levantamento de set/2026: decretos, verbas, referencial de competências e programas dos EUA para letramento em IA nas escolas, no trabalho e nas pequenas empresas, com leitura crítica e lições para o Brasil.">
+<meta property="og:title" content="Letramento em IA nos EUA — o que o governo está fazendo">
+<meta property="og:description" content="Decretos, verbas, referencial de competências e programas dos EUA para letramento em IA, com leitura crítica e lições para o Brasil.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#E2A23B; --amb2:#f0c070; --sky:#38bdf8; --red:#f87171; --grn:#4ade80;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#b9791d; --amb2:#a16207; --sky:#0369a1; --red:#b91c1c; --grn:#15803d;
+    color-scheme:light;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.2;margin:0}
+  a{color:var(--amb);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:16px;height:56px}
+  nav .brand{font-family:Sora;font-weight:800;color:var(--amb);white-space:nowrap}
+  nav .links{display:flex;gap:16px;margin-left:auto;font-size:.88rem;overflow-x:auto}
+  nav .links a{color:var(--mut);white-space:nowrap} nav .links a:hover{color:var(--txt);text-decoration:none}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.85rem;font-family:Sora;white-space:nowrap}
+  #tema{background:none;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:4px 9px;cursor:pointer}
+  @media(max-width:760px){nav .links{display:none}}
+  .hero{padding:64px 0 36px;position:relative;overflow:hidden}
+  .hero h1{font-size:clamp(2rem,5vw,3.1rem);font-weight:800;letter-spacing:-.02em;margin:12px 0 16px}
+  .hero h1 span{color:var(--amb)}
+  .hero p.lead{font-size:1.15rem;color:var(--mut);max-width:720px}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:30px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+  .kpi b{display:block;font-family:Sora;font-size:1.6rem;color:var(--amb)}
+  .kpi span{font-size:.88rem;color:var(--mut)}
+  section{padding:40px 0;border-top:1px solid var(--line)}
+  section h2{font-size:1.7rem;margin:8px 0 18px}
+  section h3{font-size:1.1rem;margin:22px 0 8px}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:14px 0}
+  .box.destaque{border-color:var(--amb);background:color-mix(in srgb,var(--amb) 8%,var(--card))}
+  .tl{list-style:none;padding:0;margin:0;border-left:2px solid var(--line)}
+  .tl li{position:relative;padding:0 0 16px 20px}
+  .tl li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--amb)}
+  .tl .d{font-family:Sora;font-weight:600;color:var(--amb);font-size:.9rem}
+  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .card h3{margin-top:0}
+  .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--amb);color:#111;font-weight:700;font-size:.85rem;margin-right:8px;font-family:Sora}
+  ul.lst{padding-left:20px;margin:8px 0} ul.lst li{margin:4px 0}
+  .tag{display:inline-block;font-size:.72rem;padding:2px 8px;border-radius:99px;border:1px solid var(--line);color:var(--mut);margin-left:6px;vertical-align:middle}
+  .crit li::marker{color:var(--red)}
+  .lic li::marker{color:var(--grn)}
+  .fontes{font-size:.88rem;columns:2 300px;column-gap:30px}
+  .fontes li{break-inside:avoid;margin:4px 0}
+  footer{padding:40px 0;text-align:center;color:var(--mut);font-size:.9rem;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <span class="brand">🇺🇸 Letramento em IA</span>
+    <div class="links">
+      <a href="#linha">Linha do tempo</a>
+      <a href="#frentes">Frentes</a>
+      <a href="#referencial">Referencial</a>
+      <a href="#critica">Crítica</a>
+      <a href="#brasil">Lições</a>
+      <a href="#fontes">Fontes</a>
+    </div>
+    <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+    <button id="tema" aria-label="Alternar tema">◐</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="chip">Levantamento · setembro de 2026</span>
+    <h1>O que os EUA estão fazendo em <span>letramento em IA</span></h1>
+    <p class="lead">Muita gente fala do letramento em IA como uma previsão para os próximos anos. Nos Estados Unidos, ele já virou política pública: há decreto presidencial, verba, um referencial oficial de competências e programas em andamento nas escolas, no trabalho e nas pequenas empresas.</p>
+    <div class="kpis">
+      <div class="kpi"><b>2</b><span>decretos presidenciais (abr/2025)</span></div>
+      <div class="kpi"><b>60+</b><span>organizações no compromisso com a educação</span></div>
+      <div class="kpi"><b>5</b><span>áreas no referencial oficial de competências</span></div>
+      <div class="kpi"><b>56</b><span>polos estaduais previstos</span></div>
+      <div class="kpi"><b>até US$ 224 mi</b><span>para esses polos</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="linha">
+  <div class="wrap">
+    <span class="chip">1 · Linha do tempo</span>
+    <h2>Em pouco mais de um ano, uma política inteira</h2>
+    <ul class="tl">
+      <li><div class="d">abr/2025</div><b>Decreto sobre educação em IA para jovens.</b> Cria uma força-tarefa na Casa Branca, um desafio nacional de IA para estudantes e parcerias com empresas para o ensino básico. Um segundo decreto, sobre profissões técnicas, fixa a meta de <b>1 milhão de aprendizes</b>.</li>
+      <li><div class="d">jun/2025</div><b>Compromisso com a juventude.</b> Mais de 60 organizações, entre elas Google, Microsoft, OpenAI, Anthropic, Amazon, Apple e Meta, se comprometem a investir em educação em IA. No mesmo mês, cerca de <b>US$ 84 milhões</b> vão aos estados para ampliar programas de aprendizagem.</li>
+      <li><div class="d">jul/2025</div><b>Plano de Ação de IA.</b> Coloca a capacitação da força de trabalho como condição para os pilares de inovação, infraestrutura e liderança.</li>
+      <li><div class="d">ago/2025</div><b>Regras do desafio nacional publicadas</b>, e orientação do Departamento do Trabalho: a verba pública de recolocação profissional pode pagar cursos de letramento em IA.</li>
+      <li><div class="d">jan a jun/2026</div><b>O desafio acontece.</b> Inscrições até 20/jan, campeões estaduais em março, regionais em abril e <b>final nacional em Washington em 8 de junho</b>.</li>
+      <li><div class="d">13/fev/2026</div><b>Referencial de Letramento em IA</b> do Departamento do Trabalho: 5 áreas de conteúdo e 7 princípios de ensino. É voluntário, não obrigatório.</li>
+      <li><div class="d">mar/abr 2026</div><b>Programa "AI-Ready America"</b> da NSF, a agência federal de ciência, em parceria com os departamentos do Trabalho e da Agricultura e com o órgão de apoio a pequenas empresas: um polo de coordenação por estado e território.</li>
+      <li><div class="d">13/abr/2026</div><b>Prioridade de IA na verba da educação.</b> O Departamento de Educação passa a favorecer, nos editais, projetos de formação de professores, contato dos alunos com IA e certificações. Vale desde 13 de maio.</li>
+      <li><div class="d">jul/2026 →</div><b>Primeira rodada dos polos</b> (10 polos, propostas até 16/jul/2026). Depois, 20 em jan/2027 e 26 em jul/2027.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="frentes">
+  <div class="wrap">
+    <span class="chip">2 · As três frentes</span>
+    <h2>Escola, trabalho e pequena empresa</h2>
+    <div class="grid3">
+      <div class="card">
+        <h3>🏫 Escolas</h3>
+        <ul class="lst">
+          <li><b>Desafio nacional de IA</b> para os ensinos fundamental e médio e para professores. Os alunos propõem ou constroem uma solução com IA para um problema da própria comunidade. Tem etapas estadual, regional e nacional.</li>
+          <li><b>Formação de professores pelas empresas:</b> currículo aberto da Anthropic (Creative Commons), US$ 150 mi do Google, 10 mil educadores pela Amazon até 2028 e mais de US$ 20 mi da Meta.</li>
+          <li><b>Editais da educação</b> passam a dar preferência a projetos com IA.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>👷 Trabalhadores</h3>
+        <ul class="lst">
+          <li><b>Referencial oficial</b> de letramento em IA, detalhado abaixo.</li>
+          <li><b>Verba de recolocação</b> pode pagar curso de IA para desempregados e trabalhadores deslocados.</li>
+          <li><b>Aprendizagem profissional:</b> meta de 1 milhão de aprendizes, com dinheiro distribuído a todos os estados.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🏪 Pequenas empresas e comunidades</h3>
+        <ul class="lst">
+          <li><b>AI-Ready America:</b> letramento e habilidades práticas, assistência técnica para pequenas empresas e prefeituras adotarem IA, e estágios e projetos reais.</li>
+          <li><b>Um polo por estado:</b> US$ 1 mi por ano durante 3 anos (mais um ano possível), 56 polos no total.</li>
+          <li>Inclui a <b>extensão rural</b>, o que leva o letramento em IA ao campo.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="referencial">
+  <div class="wrap">
+    <span class="chip">3 · O referencial de competências</span>
+    <h2>O que conta como "saber usar IA"</h2>
+    <p class="mut">O referencial do Departamento do Trabalho (fev/2026) é o documento mais útil de todo o pacote: diz o que ensinar e como ensinar. O foco é a IA generativa.</p>
+    <div class="grid2">
+      <div class="box">
+        <h3 style="margin-top:0">5 áreas de conteúdo</h3>
+        <p><span class="num">1</span>Entender como a IA funciona</p>
+        <p><span class="num">2</span>Explorar os usos da IA</p>
+        <p><span class="num">3</span>Direcionar a IA com eficácia (saber pedir)</p>
+        <p><span class="num">4</span><b>Avaliar as respostas da IA</b>: checar fatos, ver se falta algo, achar falhas de lógica</p>
+        <p><span class="num">5</span><b>Usar a IA com responsabilidade</b>: segurança e dados</p>
+      </div>
+      <div class="box">
+        <h3 style="margin-top:0">7 princípios de ensino</h3>
+        <ul class="lst">
+          <li><b>Aprender fazendo</b>, com tarefas reais, comparando respostas e melhorando a cada tentativa</li>
+          <li>Desenvolver <b>habilidades humanas complementares</b>: julgamento, comunicação e resolução de problemas</li>
+          <li><b>Ensinar dentro do contexto da profissão</b></li>
+          <li>Criar caminhos para <b>continuar aprendendo</b></li>
+          <li>Projetar para <b>mudar rápido</b>, porque as ferramentas mudam</li>
+          <li>Cuidar dos <b>pré-requisitos</b> (acesso, noções digitais básicas)</li>
+          <li>Preparar quem <b>ensina e apoia</b></li>
+        </ul>
+      </div>
+    </div>
+    <div class="box destaque"><b>A frase que resume:</b> a IA deve ajudar o trabalhador, <b>não substituir a responsabilidade</b> dele pelo resultado.</div>
+  </div>
+</section>
+
+<section id="critica">
+  <div class="wrap">
+    <span class="chip">4 · Leitura crítica</span>
+    <h2>O que funciona e o que preocupa</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>✅ O que é real</h3>
+        <ul class="lst lic">
+          <li>Há decreto, verba, prazos e um referencial publicado.</li>
+          <li>O desafio nacional aconteceu de fato, com final em junho de 2026.</li>
+          <li>O referencial é bom: prático, ligado à profissão e com ênfase em avaliar respostas.</li>
+          <li>O foco em pequena empresa e no campo atinge quem normalmente fica de fora.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>⚠️ O que preocupa</h3>
+        <ul class="lst crit">
+          <li><b>Colcha de retalhos:</b> os programas ficam espalhados, e o resultado depende de cada estado agir.</li>
+          <li><b>Verba pequena</b> para o tamanho do país. US$ 1 mi por ano por estado é pouco.</li>
+          <li><b>As big techs dão o rumo:</b> as empresas treinam os professores com as próprias ferramentas. Quem decide como a IA entra na sala de aula?</li>
+          <li><b>Poucas salvaguardas</b> de privacidade e de avaliação de resultados nos editais.</li>
+          <li>O Departamento de Educação está sendo esvaziado, com risco de perder quem sabe tocar os programas.</li>
+          <li>A motivação declarada é a <b>disputa geopolítica</b>. O letramento é tratado como parte de uma corrida.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="brasil">
+  <div class="wrap">
+    <span class="chip">5 · Lições</span>
+    <h2>O que dá para aproveitar aqui</h2>
+    <div class="grid2">
+      <div class="card"><h3>1. Checklist de curso</h3><p>Usar as 5 áreas como checklist: todo curso de IA cobre as cinco? As áreas 4 (avaliar respostas) e 5 (usar com responsabilidade) são as que mais faltam.</p></div>
+      <div class="card"><h3>2. Ensinar pela profissão</h3><p>IA para advogado, contador, profissional de saúde e dono de loja, cada um com os próprios exemplos, ensina mais que uma aula genérica.</p></div>
+      <div class="card"><h3>3. Desafio da comunidade</h3><p>O formato do desafio (resolver um problema real do bairro ou da cidade com IA, em etapas) funciona em escola, grupo ou comunidade online.</p></div>
+      <div class="card"><h3>4. Material aberto</h3><p>Já existem currículos de IA com licença aberta, que dá para adaptar e traduzir para professores brasileiros.</p></div>
+      <div class="card"><h3>5. Pequeno negócio primeiro</h3><p>Nos EUA, a pequena empresa e a prefeitura receberam frente própria. No Brasil, é o público que mais precisa e que menos recebe.</p></div>
+      <div class="card"><h3>6. Neutralidade</h3><p>Ensinar sem depender de um fornecedor só é um diferencial frente aos treinamentos bancados pelas big techs.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="fontes">
+  <div class="wrap">
+    <span class="chip">Fontes</span>
+    <h2>Para conferir</h2>
+    <p class="mut">Levantamento de 28/09/2026. Programas e números mudam rápido: confira na fonte antes de citar.</p>
+    <ul class="fontes">
+      <li><a href="https://www.ai.gov/initiatives/education" target="_blank" rel="noopener">ai.gov — AI Education</a></li>
+      <li><a href="https://www.presidency.ucsb.edu/documents/executive-order-14277-advancing-artificial-intelligence-education-for-american-youth" target="_blank" rel="noopener">Decreto 14277 (texto)</a></li>
+      <li><a href="https://cset.georgetown.edu/article/promises-and-progress/" target="_blank" rel="noopener">CSET/Georgetown — Promises and Progress</a></li>
+      <li><a href="https://www.whitehouse.gov/edai/" target="_blank" rel="noopener">Casa Branca — Pledge to America's Youth</a></li>
+      <li><a href="https://www.k12dive.com/news/over-60-organizations-sign-white-house-pledge-to-invest-in-ai-education/752139/" target="_blank" rel="noopener">K-12 Dive — 60+ organizações no compromisso</a></li>
+      <li><a href="https://www.edtechinnovationhub.com/news/white-house-ai-pledge-backed-by-60-organizations-including-big-hitters-amazon-and-google" target="_blank" rel="noopener">EdTech Innovation Hub — compromissos das empresas</a></li>
+      <li><a href="https://www.whitehouse.gov/wp-content/uploads/2025/08/Presidential-AI-Challenge-Guidebook-for-Participation.pdf" target="_blank" rel="noopener">Regras do desafio nacional (PDF)</a></li>
+      <li><a href="https://orise.orau.gov/ai-challenge/winners/2026/national.html" target="_blank" rel="noopener">Campeões nacionais 2026</a></li>
+      <li><a href="https://www.dol.gov/newsroom/releases/eta/eta20260213" target="_blank" rel="noopener">Depto. do Trabalho — Referencial de Letramento em IA</a></li>
+      <li><a href="https://www.dol.gov/sites/dolgov/files/ETA/advisories/TEN/2025/TEN%2007-25/TEN%2007-25%20(complete%20document).pdf" target="_blank" rel="noopener">Referencial completo (PDF)</a></li>
+      <li><a href="https://www.dol.gov/newsroom/releases/osec/osec20250826" target="_blank" rel="noopener">Depto. do Trabalho — verba de recolocação para IA</a></li>
+      <li><a href="https://www.congress.gov/crs-product/IN12715" target="_blank" rel="noopener">Congresso (CRS) — IA nos programas de trabalho</a></li>
+      <li><a href="https://www.nsf.gov/funding/opportunities/techaccess-ai-ready-america" target="_blank" rel="noopener">NSF — AI-Ready America</a></li>
+      <li><a href="https://www.dol.gov/newsroom/releases/osec/osec20260402" target="_blank" rel="noopener">Depto. do Trabalho + NSF — parceria</a></li>
+      <li><a href="https://www.nsf.gov/funding/opportunities/techaccess-ai-ready-america/nsf26-508/solicitation" target="_blank" rel="noopener">NSF 26-508 — edital dos polos</a></li>
+      <li><a href="https://www.federalregister.gov/documents/2026/04/13/2026-07087/final-priority-and-definitions-secretarys-supplemental-priority-and-definitions-on-advancing" target="_blank" rel="noopener">Federal Register — prioridade de IA na educação</a></li>
+      <li><a href="https://casrai.org/guides/education-department-ai-grant-priority" target="_blank" rel="noopener">CASRAI — verba sem salvaguardas</a></li>
+      <li><a href="https://www.closeup.org/big-tech-goes-to-school-who-decides-how-ai-enters-the-classroom/" target="_blank" rel="noopener">Close Up — Big Tech goes to school</a></li>
+      <li><a href="https://anthropic.skilljar.com/ai-fluency-for-educators" target="_blank" rel="noopener">Anthropic — AI Fluency for Educators</a></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Levantamento para a comunidade · <a href="https://inema.club">INEMA.CLUB</a></p>
+  </div>
+</footer>
+<script>
+  (function(){
+    var b=document.body,k='tema-letramento';
+    try{ if(localStorage.getItem(k)==='light') b.classList.add('light'); }catch(e){}
+    document.getElementById('tema').addEventListener('click',function(){
+      b.classList.toggle('light');
+      try{ localStorage.setItem(k, b.classList.contains('light')?'light':'dark'); }catch(e){}
+    });
+  })();
+</script>
+</body>
+</html>

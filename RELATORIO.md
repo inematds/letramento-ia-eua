@@ -74,10 +74,10 @@
 
 ## 5. Pendências
 
-- [ ] Conferir a licença exata do *AI Fluency for Educators* (Anthropic).
-- [ ] Ler o PDF completo do referencial (TEN 07-25): os 7 princípios em detalhe.
+- [x] Licença do *AI Fluency for Educators*: Creative Commons, livre para usar, modificar e compartilhar.
+- [x] 7 princípios: aprender fazendo, habilidades humanas complementares, contexto da profissão, aprendizado contínuo, agilidade, pré-requisitos, preparar quem ensina.
 - [ ] Pesquisar o equivalente brasileiro (Plano Brasileiro de IA, MEC, Senai/Sebrae) com fontes.
-- [ ] Ver se os polos estaduais da NSF já foram selecionados (a data não foi confirmada nesta pesquisa).
+- [x] Polos NSF: US$ 1 mi/ano × 3 anos (+1 opcional); 10 na rodada 1 (propostas até 16/jul/2026), 20 em jan/2027, 26 em jul/2027. Seleção da rodada 1 ainda não divulgada.
 - [ ] Decidir o formato do entregável: relatório só interno, post, vídeo ou página.
 
 ## Fontes
